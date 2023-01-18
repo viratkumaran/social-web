@@ -1,0 +1,174 @@
+<!-- <aside class="aside" id="aside">
+  <div class="aside-head">
+    <div class="brand">
+      <div class="brand-logo">
+        <h1 class="brand-title ">
+          <a aria-label="Logo" alt="Facit">
+            <span> <img src="../../Assets/Img/logo.png" class="img-logo"> </span> <span>
+            </span></a>
+        </h1>
+      </div>
+      <button type="button" class="btn brand-aside-toggle" onclick="OpenView()" aria-label="Toggle Aside">
+        <i class="fa fa-arrow-right" style="font-size: 14px;" id="button" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+  <div class="aside-body">
+    <nav>
+      <ul id="aside-dashboard" class="navigation">
+        <li class="navigation-item">
+          <a aria-current="page" class="navigation-link navigation-link-pill active" [routerLink]="['/dashboard']"
+            routerLinkActive="router-link-active">
+            <span class="navigation-link-info">
+              <i class="fa fa-th-large" aria-hidden="true"></i>
+              <span class="navigation-text">Dashboard</span></span></a>
+        </li>
+        <li class="navigation-item">
+          <a aria-current="page" class="navigation-link navigation-link-pill active" [routerLink]="['/schedule']"
+            routerLinkActive="router-link-active"><span class="navigation-link-info">
+              <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+              <span class="navigation-text">Schedule</span></span></a>
+        </li>
+        <li class="navigation-item">
+          <a aria-current="page" class="navigation-link navigation-link-pill active" href="../Components/queue.html">
+            <span class="navigation-link-info">
+              <i class="fa fa-id-card" aria-hidden="true"></i>
+              <span class="navigation-text">Queue</span></span></a>
+        </li>
+        <li class="navigation-item">
+          <a aria-current="page" class="navigation-link navigation-link-pill active"
+            href="../Components/analytics.html">
+            <span class="navigation-link-info">
+              <i class="fa fa-object-group" aria-hidden="true"></i>
+              <span class="navigation-text">Analytics</span></span></a>
+        </li>
+        <li class="navigation-item">
+          <a aria-current="page" class="navigation-link navigation-link-pill active" [routerLink]="['/Monitor']">
+            <span class="navigation-link-info">
+              <i class="fa fa-television" aria-hidden="true"></i>
+              <span class="navigation-text">Monitor</span></span></a>
+        </li>
+
+        <li class="navigation-item">
+          <a aria-current="page" class="navigation-link navigation-link-pill active" [routerLink]="['/connection']"
+            routerLinkActive="router-link-active">
+            <span class="navigation-link-info">
+              <i class="fa fa-connectdevelop" aria-hidden="true"></i>
+              <span class="navigation-text">Connecting</span></span></a>
+        </li>
+
+      </ul>
+    </nav>
+  </div>
+  <div class="aside-footer"></div>
+</aside>
+<div class="wrapper" id="wrapper">
+  <header class="header">
+    <div class="container-fluid">
+      <div class="row d-flex align-items-center">
+        <div class="header-left col-md">
+          <div class="d-flex" data-tour="search"><label class="border-0 bg-transparent cursor-pointer"
+              for="searchInput">
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </label><input id="searchInput" name="searchInput" type="search"
+              class="form-control border-0 shadow-none bg-transparent" placeholder="Search..." autocomplete="off"
+              value=""></div>
+        </div>
+        <div class="header-right col-md-auto">
+          <div class="row g-3">
+            <div class="col-auto position-relative">
+              <button class="btn btn-lg btn-hover-shadow btn-light-light btn-only-icon"><a class="btn-light-light"
+                  [routerLink]="['/brand']" routerLinkActive="router-link-active">Brand</a></button>
+            </div>
+            <div class="col-auto position-relative">
+              <button class="btn btn-lg btn-hover-shadow btn-light-light btn-only-icon"><a class="btn-light-light"
+                  [routerLink]="['/post']" routerLinkActive="router-link-active">Post</a></button>
+            </div>
+            <div class="col-auto position-relative">
+              <button class="btn btn-lg btn-hover-shadow btn-light-light btn-only-icon"><a class="btn-light-light"
+                  [routerLink]="['/message']" routerLinkActive="router-link-active">Message</a></button>
+            </div>
+            <div class="col-auto position-relative">
+              <button class="btn btn-lg btn-hover-shadow btn-light-light btn-only-icon"><a class="btn-light-light"
+                  [routerLink]="['/hastags']" routerLinkActive="router-link-active">Hastags</a></button>
+            </div>
+            <div class="col-auto position-relative">
+              <button class="btn btn-lg btn-hover-shadow btn-light-light btn-only-icon"><a class="btn-light-light"
+                  [routerLink]="['/profile']" routerLinkActive="router-link-active">Profile</a></button>
+            </div>
+            <div class="col-auto position-relative">
+              <button class="btn btn-lg btn-hover-shadow btn-light-light btn-only-icon"><a class="btn-light-light"
+                  [routerLink]="['/setting']" routerLinkActive="router-link-active">Setting</a></button>
+            </div>
+            <div class="col-auto position-relative">
+              <button class="btn btn-lg btn-hover-shadow btn-light-light btn-only-icon"><a class="btn-light-light"
+                  (click)="logout()" routerLinkActive="router-link-active">Logout</a></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+</div> -->
+
+
+<!--============= header and sidebar=================== -->
+<nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary bgFornav">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"> <span class="clr-red">Social</span><span class="clr-media">Media</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" [routerLink]="['/brand']"
+            routerLinkActive="router-link-active">Brand</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/post']">Post</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/hastags']" routerLinkActive="router-link-active">Hashtags</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/message']">Message</a>
+        </li>
+
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="#">Post</a>
+        </li> -->
+
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+        <button (click)="logout()" class="btn btn-outline-primary ml-2" type="submit">Logout</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<aside>
+  <nav class="nav sidebar">
+    <ul class="menu-slide ">
+      <li [routerLink]="['/dashboard']" routerLinkActive="router-link-active">
+        <a><i class="fa fa-home" aria-hidden="true"></i>Dashboard</a>
+      </li>
+      <li [routerLink]="['/analytics']" routerLinkActive="router-link-active">
+        <a><i class="fa fa-pie-chart" aria-hidden="true"></i>Analytics</a>
+      </li>
+      <li [routerLink]="['/schedule']" routerLinkActive="router-link-active">
+        <a> <i class="fa fa-calendar-o" aria-hidden="true"></i>Schedule</a>
+      </li>
+      <li [routerLink]="['/Monitor']" routerLinkActive="router-link-active">
+        <a><i class="fa fa-desktop" aria-hidden="true"></i>Monitor</a>
+      </li>
+      <li [routerLink]="['/connection']" routerLinkActive="router-link-active">
+        <a> <i class="fa fa-connectdevelop" aria-hidden="true"></i>Connecting</a>
+      </li>
+    </ul>
+  </nav>
+</aside>
+<!-- ===========end header ============================ -->

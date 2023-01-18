@@ -1,0 +1,437 @@
+<main class="content">
+  <div class="page-wrapper container-fluid">
+
+    <div class="page container-fluid" style="margin-top: 1.5rem;">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="addpost" *ngIf="!postForm">
+              <button class="ui-btn" id="create" (click)="createPost($event)">Create New Post</button>
+              <button class="ui-btn" id="schedule" (click)="createPost($event)">Schedule New Post</button>
+
+            </div>
+          </div>
+          <ng-container *ngIf="!postForm">
+            <div class="col-lg-8">
+              <ng-container *ngFor='let s of postdetail'>
+                <ng-container *ngIf="localsrcimg.length>0">
+                  <ng-container *ngFor='let getImage of localsrcimg;let i = index'>
+                    <div class="card card-block card-stretch card-height blog blog-detail">
+                      <div class="card-body">
+                        <div class="image-block">
+                          <div>
+                            <img src="{{getImage?.media.image.src}}" style="height:300px;"
+                              class="img-fluid rounded w-100" alt="blog-img">
+                          </div>
+
+                        </div>
+                        <div class="blog-description mt-3">
+                          <!-- <div *ngFor='let Description of s.attachments.data'> -->
+                          <h5 class="mb-3 pb-3 border-bottom">{{getImage.description}}</h5>
+                          <!-- </div> -->
+
+                          <div class="blog-meta d-flex align-items-center mb-3 position-right-side flex-wrap">
+                            <div class="date me-4"><i
+                                class="ri-calendar-2-fill text-primary pe-2"></i>{{s.created_time| dateAgo}}</div>
+                            <div class="like me-4"><i
+                                class="ri-thumb-up-line text-primary pe-2"></i>{{s.likes && s.likes.data.length > 0 ? s.likes.data.length : 0}}like
+                            </div>
+                            <div class="comments me-4"><i
+                                class="ri-chat-3-line text-primary pe-2"></i>{{s.comments && s.comments.data.length > 0 ? s.comments.data.length : 0}}comments
+                            </div>
+                            <div class="share"><i class="ri-share-forward-line text-primary pe-2"></i>share</div>
+                          </div>
+                          <!-- <p>Voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
+                            inventore
+                            veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                            voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+                            voluptatem sequi nesciunt.</p>
+                          <a href="#" tabindex="-1">Read More <i class="ri-arrow-right-s-line"></i></a> -->
+                        </div>
+                      </div>
+                    </div>
+                  </ng-container>
+                </ng-container>
+              </ng-container>
+
+              <!-- <div class="card card-block card-stretch card-height blog blog-detail" *ngFor='let s of postdetail'>
+                <div class="card-body">
+                  <div class="image-block" *ngIf="localsrcimg.length>0">
+                    <div *ngFor='let images of s.attachments.data'>
+                      <img src="{{images.media.image.src}}" style="height:300px;" class="img-fluid rounded w-100"
+                        alt="blog-img">
+                    </div>
+
+                  </div>
+                  <div class="blog-description mt-3" *ngIf="localsrcimg.length>0">
+                    <div *ngFor='let Description of s.attachments.data'>
+                      <h5 class="mb-3 pb-3 border-bottom">{{Description.description}}</h5>
+                    </div>
+
+                    <div class="blog-meta d-flex align-items-center mb-3 position-right-side flex-wrap">
+                      <div class="date me-4"><i
+                          class="ri-calendar-2-fill text-primary pe-2"></i>{{s.created_time| dateAgo}}</div>
+                      <div class="like me-4"><i
+                          class="ri-thumb-up-line text-primary pe-2"></i>{{s.likes && s.likes.data.length > 0 ? s.likes.data.length : 0}}like
+                      </div>
+                      <div class="comments me-4"><i
+                          class="ri-chat-3-line text-primary pe-2"></i>{{s.comments && s.comments.data.length > 0 ? s.comments.data.length : 0}}comments
+                      </div>
+                      <div class="share"><i class="ri-share-forward-line text-primary pe-2"></i>share</div>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div> -->
+            </div>
+            <div class="col-lg-4">
+              <div class="card card-block card-stretch card-height blog-post">
+                <div class="card-header d-flex justify-content-between">
+                  <div class="header-title">
+                    <h4 class="card-title">New Post</h4>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <ul class="list-inline p-0 mb-0 mt-2">
+                    <li class="mb-3">
+                      <div class="row align-items-top pb-3 border-bottom">
+                        <div class="col-md-5">
+                          <div class="image-block">
+                            <img src="../../Assets/Img/01.jpg" class="img-fluid rounded w-100" alt="blog-img">
+                          </div>
+                        </div>
+                        <div class="col-md-7">
+                          <div class="blog-description mt-1 mt-md-0">
+                            <div class="date mb-1"><a href="#" tabindex="-1">4 Weeks ago</a></div>
+                            <h6>All the Lorem Ipsum generators</h6>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="mb-3">
+                      <div class="row align-items-top pb-3 border-bottom">
+                        <div class="col-md-5">
+                          <div class="image-block">
+                            <img src="../../Assets/Img/01.jpg" class="img-fluid rounded w-100" alt="blog-img">
+                          </div>
+                        </div>
+                        <div class="col-md-7">
+                          <div class="blog-description mt-1 mt-md-0">
+                            <div class="date mb-1"><a href="#" tabindex="-1">3 Weeks ago</a></div>
+                            <h6>All the Lorem Ipsum generators</h6>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="mb-3">
+                      <div class="row align-items-top pb-3 border-bottom">
+                        <div class="col-md-5">
+                          <div class="image-block">
+                            <img src="../../Assets/Img/01.jpg" class="img-fluid rounded w-100" alt="blog-img">
+                          </div>
+                        </div>
+                        <div class="col-md-7">
+                          <div class="blog-description mt-1 mt-md-0">
+                            <div class="date mb-1"><a href="#" tabindex="-1">2 Weeks ago</a></div>
+                            <h6>All the Lorem Ipsum generators</h6>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="mb-3">
+                      <div class="row align-items-top pb-3 border-bottom">
+                        <div class="col-md-5">
+                          <div class="image-block">
+                            <img src="../../Assets/Img/01.jpg" class="img-fluid rounded w-100" alt="blog-img">
+                          </div>
+                        </div>
+                        <div class="col-md-7">
+                          <div class="blog-description mt-1 mt-md-0">
+                            <div class="date mb-1"><a href="#" tabindex="-1">1 Week ago</a></div>
+                            <h6>All the Lorem Ipsum generators</h6>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="mb-3">
+                      <div class="row align-items-top pb-3 border-bottom">
+                        <div class="col-md-5">
+                          <div class="image-block">
+                            <img src="../../Assets/Img/01.jpg" class="img-fluid rounded w-100" alt="blog-img">
+                          </div>
+                        </div>
+                        <div class="col-md-7">
+                          <div class="blog-description mt-1 mt-md-0">
+                            <div class="date mb-1"><a href="#" tabindex="-1">3 days ago</a></div>
+                            <h6>All the Lorem Ipsum generators</h6>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="row align-items-top">
+                        <div class="col-md-5">
+                          <div class="image-block">
+                            <img src="../../Assets/Img/01.jpg" class="img-fluid rounded w-100" alt="blog-img">
+                          </div>
+                        </div>
+                        <div class="col-md-7">
+                          <div class="blog-description mt-1 mt-md-0">
+                            <div class="date mb-1"><a href="#" tabindex="-1">2 Days ago</a></div>
+                            <h6>All the Lorem Ipsum generators</h6>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="card card-block card-stretch card-height blog user-comment">
+                <div class="card-header d-flex justify-content-between">
+                  <div class="header-title">
+                    <h4 class="card-title">User Comment</h4>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="card card-block card-stretch card-height blog">
+                        <div class="card-body">
+                          <div class="d-flex align-items-center">
+                            <div class="user-image mb-3">
+                              <img class="avatar-80 rounded" src="../../Assets/Img/11.png" alt="#"
+                                data-original-title="" title="">
+                            </div>
+                            <div class="ms-3">
+                              <h5>Kaya Scodelario</h5>
+                              <p>Web Developer</p>
+                            </div>
+                          </div>
+                          <div class="blog-description">
+                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+                              voluptatum atque corrupti quos dolores et quas molestias excepturi sint occaecati
+                              cupiditate
+                              non provident.</p>
+                            <div class="d-flex align-items-center justify-content-between mb-2 position-right-side">
+                              <a href="#" class="comments"><i class="ri-chat-3-fill pe-2"></i>82 comments</a>
+                              <span class="font-size-12 text-warning">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-12 ps-0 ps-md-5">
+                      <div class="card card-block card-stretch card-height blog">
+                        <div class="card-body">
+                          <div class="d-flex align-items-center">
+                            <div class="user-image mb-3">
+                              <img class="avatar-80 rounded" src="../../Assets/Img/11.png" alt="#"
+                                data-original-title="" title="">
+                            </div>
+                            <div class="ms-3">
+                              <h5>Tom Cruise</h5>
+                              <p>Web Designer</p>
+                            </div>
+                          </div>
+                          <div class="blog-description">
+                            <p>It is a long established fact that a reader will be distracted by the readable content of
+                              a
+                              page when looking at its layout. The point of using Lorem Ipsum Many desktop publishing
+                              packages and web page editors now use Lorem Ipsum.</p>
+                            <div class="d-flex align-items-center justify-content-between mb-2 position-right-side">
+                              <a href="#" class="comments"><i class="ri-chat-3-fill pe-2"></i>98 comments</a>
+                              <span class="font-size-12 text-warning">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <div class="card card-block card-stretch card-height blog">
+                        <div class="card-body">
+                          <div class="d-flex align-items-center">
+                            <div class="user-image mb-3">
+                              <img class="avatar-80 rounded" src="../../Assets/Img/11.png" alt="#"
+                                data-original-title="" title="">
+                            </div>
+                            <div class="ms-3">
+                              <h5>Walter Hucko</h5>
+                              <p>Web Designer</p>
+                            </div>
+                          </div>
+                          <div class="blog-description">
+                            <p>TThere are many variations of passages of Lorem Ipsum available, but the majority have
+                              suffered alteration in some form, by injected humour, or randomised words which don't look
+                              even slightly believable.</p>
+                            <div class="d-flex align-items-center justify-content-between mb-2 position-right-side">
+                              <a href="#" class="comments"><i class="ri-chat-3-fill pe-2"></i>28 comments</a>
+                              <span class="font-size-12 text-warning">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-12 ps-0 ps-md-5">
+                      <div class="card card-block card-stretch card-height blog">
+                        <div class="card-body">
+                          <div class="d-flex align-items-center">
+                            <div class="user-image mb-3">
+                              <img class="avatar-80 rounded" src="../../Assets/Img/11.png" alt="#"
+                                data-original-title="" title="">
+                            </div>
+                            <div class="ms-3">
+                              <h5>Mark Walton</h5>
+                              <p>Web Manager</p>
+                            </div>
+                          </div>
+                          <div class="blog-description">
+                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have
+                              suffered alteration.randomised words which don't look even slightly believable variations
+                              of
+                              passages.</p>
+                            <div class="d-flex align-items-center justify-content-between mb-2 position-right-side">
+                              <a href="#" class="comments"><i class="ri-chat-3-fill pe-2"></i>98 comments</a>
+                              <span class="font-size-12 text-warning">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <div class="card card-block card-stretch card-height blog mb-0">
+                        <div class="card-header d-flex justify-content-between">
+                          <div class="header-title">
+                            <h4 class="card-title">Your Comment</h4>
+                          </div>
+                        </div>
+                        <div class="card-body">
+                          <form>
+                            <div class="form-group">
+                              <label for="email1" class="form-label">Email address:</label>
+                              <input type="email" class="form-control" id="email1">
+                            </div>
+                            <div class="form-group">
+                              <label for="pwd" class="form-label">Password:</label>
+                              <input type="password" class="form-control" id="pwd">
+                            </div>
+                            <div class="form-group">
+                              <label for="exampleFormControlTextarea1" class="form-label">Comment</label>
+                              <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+                            </div>
+                            <div class="form-check mb-3 w-100">
+                              <input class="form-check-input" type="checkbox" id="remember-box" value="option1">
+                              <label class="form-check-label" for="remember-box">Remember me</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary me-2">Submit</button>
+                            <button type="submit" class="btn bg-soft-danger">Cancel</button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-container>
+
+
+          <!-- add post form -->
+
+          <ng-container *ngIf="postForm">
+            <div class="box-card-form">
+              <div class="post-media">
+                <div>
+                  <label for="">Choose Social Media</label>
+                  <select class="form-control" style="width: 30%;" (click)="socialmediaSelect($event)">
+                    <option value="Facebook">Facebook</option>
+                    <option value="linkedin">Linked in</option>
+                    <option value="insta" *ngIf="!sche">Instagram</option>
+                    <option value="Twitter">Twitter</option>
+                  </select>
+                </div>
+              </div>
+              <form [formGroup]="formdata" (ngSubmit)="onClickSubmit(formdata.value)">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Post Name</label>
+                      <input type="text" formControlName="postName" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Image Upload</label>
+                      <!-- <input #imageInput (change)="getFile($event)" accept="image/*" placeholder="postImage"
+                      formControlName="postImage" type="file" required> -->
+                      <input id="addPhotoInput" type="file" (change)="getFile($event)" formControlName="postImage"
+                        class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label>Description</label>
+                      <textarea type="text" formControlName="describe" class="form-control" rows="5"></textarea>
+                    </div>
+
+                  </div>
+                  <div class="col-md-12" *ngIf="sche">
+                    <div class="form-group">
+                      <label>date & time</label>
+                      <dl-date-time-picker startView="day" maxView="year" minView="minute" minuteStep="5"
+                        [(ngModel)]="selectedDate" formControlName="datenow" class="form-control">
+                      </dl-date-time-picker>
+
+                    </div>
+
+                  </div>
+                  <div class="col-12 mt-4">
+                    <div class="text-end">
+                      <button id='btn' class="btn btn-sm btn-success">Create </button>
+                    </div>
+                  </div>
+                </div>
+
+
+              </form>
+
+            </div>
+          </ng-container>
+          <div class="custom-toast" *ngIf="message" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+              <div class="toast-body">
+                {{message}}
+              </div>
+              <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="card mt-5" style="padding:20px;box-shadow: 2px 3px 3px 3px whitesmoke;">
+      <div class="col-12">
+        <table class="table table-bordered">
+          <thead style="background-color:#124087 ;color: white;">
+            <tr>
+              <th>Brand Name</th>
+              <th>Post</th>
+              <th> Schedule Date </th>
+              <th> Create Date </th>
+              <!-- <th>Time</th> -->
+            </tr>
+
+            <!-- <th>Status</th> -->
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of userArray">
+              <td>{{item.productName}}</td>
+              <td>{{item.postName}}</td>
+              <td>{{item.datenow |date:'yyyy/MM/dd h:mm:ss a'}}</td>
+              <td>{{item.created_at|date:'yyyy/MM/dd h:mm:ss a'}}</td>
+              <!-- <td>{{item.timenew | date:'yyyy/MM/dd h:mm:ss a'}} </td> -->
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

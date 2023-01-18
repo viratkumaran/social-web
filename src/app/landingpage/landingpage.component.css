@@ -1,0 +1,195 @@
+.navbar-default {
+    background-color: var(--geeks-navbar-bg);
+    box-shadow: 0 1px 3px rgb(17 24 39 / 9%);
+}
+.ms-3 {
+    margin-left: 1rem!important;
+}
+.ms-1 {
+    margin-left: 0.25rem!important;
+}
+.navbar {
+    padding: 0.625rem 1rem;
+}
+
+/* section {
+    padding-top: 3.5rem;
+    padding-bottom: 2.8rem;
+} */
+.h5, h5 {
+    font-size: .875rem;
+}
+section {
+    padding-top: 3.5rem;
+    padding-bottom: 2.8rem;
+}
+.py-8 {
+    padding-bottom: 3.5rem!important;
+    padding-top: 3.5rem!important;
+}
+.fw-bold {
+    font-weight: 700!important;
+}
+.display-3, .display-4 {
+    font-weight: 600;
+    line-height: 1.2;
+}
+.display-3 {
+    font-size: 3rem;
+}
+.btn {
+    --geeks-btn-padding-x: 1rem;
+    --geeks-btn-padding-y: 0.5rem;
+    --geeks-btn-font-family: ;
+    --geeks-btn-font-size: 0.875rem;
+    --geeks-btn-font-weight: 600;
+    --geeks-btn-line-height: 1.6;
+    --geeks-btn-color: #64748b;
+    --geeks-btn-bg: transparent;
+    --geeks-btn-border-width: 1px;
+    --geeks-btn-border-color: transparent;
+    --geeks-btn-border-radius: 0.375rem;
+    --geeks-btn-hover-border-color: transparent;
+    --geeks-btn-box-shadow: inset 0 1px 0 hsla(0,0%,100%,.15),0 1px 1px rgba(0,0,0,.075);
+    --geeks-btn-disabled-opacity: 0.65;
+    --geeks-btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(--geeks-btn-focus-shadow-rgb),.5);
+    background-color: var(--geeks-btn-bg);
+    border: var(--geeks-btn-border-width) solid var(--geeks-btn-border-color);
+    border-radius: var(--geeks-btn-border-radius);
+    color: var(--geeks-btn-color);
+    cursor: pointer;
+    display: inline-block;
+    font-family: var(--geeks-btn-font-family);
+    font-size: var(--geeks-btn-font-size);
+    font-weight: var(--geeks-btn-font-weight);
+    line-height: var(--geeks-btn-line-height);
+    padding: var(--geeks-btn-padding-y) var(--geeks-btn-padding-x);
+    text-align: center;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    vertical-align: middle;
+}
+.fs-4 {
+    font-size: 1rem!important;
+}
+.ms-3 {
+    margin-left: 1rem!important;
+}
+a{
+    text-decoration: none;
+}
+
+.end-0 {
+    right: 0!important;
+}
+.bottom-0 {
+    bottom: 0!important;
+}
+.position-absolute {
+    position: absolute!important;
+}
+.mt-n8 {
+    margin-top: -7rem !important;
+}
+.opacity-1 {
+    opacity: 0.1 !important;
+}
+.fill-primary {
+    fill: #066ac9 !important;
+}
+.translate-middle-y {
+    -webkit-transform: translateY(-50%) !important;
+    transform: translateY(-50%) !important;
+}
+.end-0 {
+    right: 0 !important;
+}
+.top-50 {
+    top: 50% !important;
+}
+
+.d-flex.justify-content-center.align-items-center.p-4.bg-warning.bg-opacity-15.rounded-3 {
+    background: #fef6e0 !important;
+}
+.rounded-3 {
+    background: #e8ebed;
+}
+.d-flex.justify-content-center.align-items-center.p-4.bg-purple.bg-opacity-10.rounded-3 {
+    background: #f0ecf9;
+}
+.fw-bold {
+    font-weight: 700 !important;
+}
+@media (min-width: 992px){
+.py-lg-16 {
+    padding-bottom: 7.5rem!important;
+    /* padding-top: 7.5rem!important; */
+}
+.pe-lg-10 {
+    padding-right: 4.5rem!important;
+}
+}
+
+
+/*  */
+.btn-primary {
+    --geeks-btn-color: #fff;
+    --geeks-btn-bg: #754ffe;
+    --geeks-btn-border-color: #754ffe;
+    --geeks-btn-hover-color: #fff;
+    --geeks-btn-hover-bg: #6343d8;
+    --geeks-btn-hover-border-color: #5e3fcb;
+    --geeks-btn-focus-shadow-rgb: 138,105,254;
+    --geeks-btn-active-color: #fff;
+    --geeks-btn-active-bg: #5e3fcb;
+    --geeks-btn-active-border-color: #583bbf;
+    --geeks-btn-active-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+    --geeks-btn-disabled-color: #fff;
+    --geeks-btn-disabled-bg: #754ffe;
+    --geeks-btn-disabled-border-color: #754ffe;
+}
+.nav-pills-bg-soft {
+    background-color: rgba(6, 106, 201, 0.1);
+    padding: 0.625rem 0;
+    border-radius: 0.625rem;
+}
+a.badge.bg-purple.bg-opacity-10.text-purple {
+    background: #8000803d;
+    color: purple;
+}
+h5.card-title.fw-normal {
+    font-size: 18px;
+    font-weight: 600 !important;
+}
+a.btn.btn-outline-warning.mb-0 {
+    background: orange;
+    color: white;
+}
+.sc-light{
+    background:#f5f7f9;
+}
+.avatar-xl {
+    height: 5.125rem;
+    width: 5.125rem;
+}
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+.rounded-circle {
+    border-radius: 50% !important;
+}
+.avatar {
+    /* height: 3rem;
+    width: 3rem; */
+    position: relative;
+    display: inline-block !important;
+}
+.avatar-sm {
+    height: 2.5rem;
+    width: 2.5rem;
+}

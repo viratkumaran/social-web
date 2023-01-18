@@ -1,0 +1,62 @@
+<div class="section height-100vh align-items-center d-flex ">
+  <div class="container">
+    <div class="row justify-content-center g-0 vertical-align">
+      <div class="col-lg-4 col-md-6 login-fancy-bg bg" style="background-image: linear-gradient(
+                 #5838f4e0,#5838f4e0
+                  ), url('../../assets/Img/login-inner-bg.jpg');border-top-left-radius: 10%;
+border-bottom-left-radius: 10%;">
+        <div class="login-fancy">
+          <h2 class="text-white mb-20">Hello world!</h2>
+          <p class="mb-20 text-white">Create tailor-cut websites with the exclusive multi-purpose
+            responsive template along with powerful features.</p>
+          <ul class="list-unstyled  pos-bot pb-30">
+            <li class="list-inline-item"><a class="text-white" href="#"> Terms of Use</a> </li>
+            <li class="list-inline-item"><a class="text-white" href="#"> Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 bg-white br-r">
+       
+        <form [formGroup]="loginForm" >
+          <div class="login-fancy pb-40 clearfix">
+            <h3 class="mb-30">Sign In To Admin</h3>
+            <div class="section-field mb-20">
+              <label class="mb-10" for="name">User name* </label>
+              <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+              <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                  <div *ngIf="f.username.errors.required">Username is required</div>
+              </div>
+              </div>
+            <div class="section-field mb-20">
+              <label class="mb-10" for="Password">Password* </label>
+              <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+              <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                  <div *ngIf="f.password.errors.required">Password is required</div>
+              </div>
+                        </div>
+            <!-- <div class="section-field">
+              <div class="remember-checkbox mb-30">
+                <input type="checkbox" class="form-control" name="two" id="two">
+                <label for="two"> Remember me</label>
+                <a [routerLink]="['/forgot']" routerLinkActive="router-link-active" class="float-end">Forgot Password?</a>
+              </div>
+            </div> -->
+            <button [disabled]="loading" class="btn btn-primary"(click)="loginUser()">
+              <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+              Login
+              <i class="fa fa-check"></i>
+            </button>
+            <!-- <a (click)="submit()" [routerLink]="['/dashboard']" routerLinkActive="router-link-active" class="button">
+              <span>Log in</span>
+              <i class="fa fa-check"></i>
+            </a>  -->
+            <!-- <a routerLink="/register" class="btn btn-link">Register</a> -->
+            <p class="mt-20 mb-0 f-13">Don't have an account? <a routerLink="/signin" class="btn btn-link"> Create one here</a>
+            </p>
+          </div>
+        </form>
+        
+      </div>
+    </div>
+  </div>
+</div>

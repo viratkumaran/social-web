@@ -1,0 +1,38 @@
+<div class="content-body">
+  <h4 class="main-title">Pages Overview</h4>
+  <div class="container">
+    <div class="row">
+      <div class="card">
+        <div class="col-md-12">
+          <kendo-chart>
+            <kendo-chart-series>
+              <kendo-chart-title text="View Growth"></kendo-chart-title>
+              <kendo-chart-series-item type="bubble" [data]="jobsData" xField="x" yField="y" sizeField="size"
+                categoryField="category">
+              </kendo-chart-series-item>
+              <kendo-chart-x-axis>
+                <kendo-chart-x-axis-item [axisCrossingValue]="-5000" [majorUnit]="2000" [plotBands]="xPlotBands">
+                  <kendo-chart-x-axis-item-labels format="{0:N0}" [skip]="1" rotation="auto">
+                  </kendo-chart-x-axis-item-labels>
+                </kendo-chart-x-axis-item>
+              </kendo-chart-x-axis>
+              <kendo-chart-y-axis>
+                <kendo-chart-y-axis-item [labels]="{ format: '{0:N0}' }">
+                </kendo-chart-y-axis-item>
+              </kendo-chart-y-axis>
+              <kendo-chart-tooltip format="{3}: {2:N0} applications" [opacity]="1">
+              </kendo-chart-tooltip>
+              <kendo-chart-legend [visible]="false"> </kendo-chart-legend>
+            </kendo-chart-series>
+          </kendo-chart>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row ">
+
+  </div>
+  <div class="row mt-5">
+
+  </div>
+</div>
