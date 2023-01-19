@@ -1,3 +1,10 @@
+import { HastagsComponent } from './hastags/hastags.component';
+import { InbocComponent } from './inboc/inboc.component';
+import { PlaningComponent } from './planing/planing.component';
+import { LinkedinComponent } from './linkedin/linkedin.component';
+import { InstaComponent } from './insta/insta.component';
+import { TwitterComponent } from './twitter/twitter.component';
+import { FbComponent } from './fb/fb.component';
 import { ProfileComponent } from './profile/profile.component';
 import { MessageComponent } from './message/message.component';
 import { PostComponent } from './post/post.component';
@@ -23,6 +30,13 @@ const routes: Routes = [
   { path: "message", component: MessageComponent, canActivate: [GuardActivateGuard] },
   { path: "profile", component: ProfileComponent, canActivate: [GuardActivateGuard] },
   { path: "schedule", component: ScheduleComponent, canActivate: [GuardActivateGuard] },
+  { path: "facebook", component: FbComponent, canActivate: [GuardActivateGuard] },
+  { path: "twitter", component: TwitterComponent, canActivate: [GuardActivateGuard] },
+  { path: "instagram", component: InstaComponent, canActivate: [GuardActivateGuard] },
+  { path: "linkedin", component: LinkedinComponent, canActivate: [GuardActivateGuard] },
+  { path: "planing", component: PlaningComponent, canActivate: [GuardActivateGuard] },
+  { path: "inbox", component: InbocComponent, canActivate: [GuardActivateGuard] },
+  { path: "hashtag", component: HastagsComponent, canActivate: [GuardActivateGuard] },
   { path: "", component: LandingpageComponent },
 
   // { path: '**', redirectTo: 'home', pathMatch: 'full' }

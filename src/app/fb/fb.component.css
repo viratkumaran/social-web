@@ -10,9 +10,11 @@ h4{
 .d-widget {
     border-radius: 5px;
     display: inline-block;
-    padding: 30px 15px;
+    padding: 29px 15px;
     width: 100%;
     border: 1px solid #e1e8ed;
+    background: white;
+    box-shadow: 0 2px 4px -1px rgb(0 0 0 / 8%), 0 4px 5px 0 rgb(0 0 0 / 5%), 0 1px 10px 0 rgb(0 0 0 / 3%);
 }
 .soft-red {
     background: #ffe1e2;
@@ -140,4 +142,10 @@ table.table-default td > a {
     padding: 12px 18px;
     text-transform: capitalize;
     transition: all 0.2s linear 0s;
+}
+.card{
+    background-color: #fff;
+    border-color: #fff;
+    color: rgba(0,0,0,.87);
+    box-shadow: 0 2px 4px -1px rgb(0 0 0 / 8%), 0 4px 5px 0 rgb(0 0 0 / 5%), 0 1px 10px 0 rgb(0 0 0 / 3%);
 }

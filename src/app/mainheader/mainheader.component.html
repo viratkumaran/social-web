@@ -123,14 +123,14 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" [routerLink]="['/brand']"
-            routerLinkActive="router-link-active">Brand</a>
+          <a class="nav-link active" aria-current="page" [routerLink]="['/analytics']"
+            routerLinkActive="router-link-active">Analytics</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/post']">Post</a>
+          <a class="nav-link" [routerLink]="['/post']">Inbox</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/hastags']" routerLinkActive="router-link-active">Hashtags</a>
+          <a class="nav-link" [routerLink]="['/hashtag']" routerLinkActive="router-link-active">Planing</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" [routerLink]="['/message']">Message</a>
@@ -153,17 +153,26 @@
 <aside>
   <nav class="nav sidebar">
     <ul class="menu-slide ">
-      <li [routerLink]="['/dashboard']" routerLinkActive="router-link-active">
-        <a><i class="fa fa-home" aria-hidden="true"></i>Dashboard</a>
+      <li [routerLink]="['/facebook']" routerLinkActive="router-link-active">
+        <a><i class="fa fa-facebook-square" aria-hidden="true"></i>Facebook</a>
       </li>
-      <li [routerLink]="['/analytics']" routerLinkActive="router-link-active">
-        <a><i class="fa fa-pie-chart" aria-hidden="true"></i>Analytics</a>
+      <li [routerLink]="['/instagram']" routerLinkActive="router-link-active">
+        <a><i class="fa fa-instagram" aria-hidden="true"></i>Instagram</a>
       </li>
-      <li [routerLink]="['/schedule']" routerLinkActive="router-link-active">
-        <a> <i class="fa fa-calendar-o" aria-hidden="true"></i>Schedule</a>
+      <li [routerLink]="['/twitter']" routerLinkActive="router-link-active">
+        <a> <i class=" fa fa-twitter-square" aria-hidden="true"></i>Twitter</a>
+      </li>
+      <li [routerLink]="['/linkedin']" routerLinkActive="router-link-active">
+        <a><i class="fa fa-linkedin-square" aria-hidden="true"></i>Linkedin</a>
       </li>
       <li [routerLink]="['/Monitor']" routerLinkActive="router-link-active">
-        <a><i class="fa fa-desktop" aria-hidden="true"></i>Monitor</a>
+        <a><i class="fa fa-pinterest-square" aria-hidden="true"></i>PinInterest</a>
+      </li>
+      <li [routerLink]="['/Monitor']" routerLinkActive="router-link-active">
+        <a><i class="fa fa-briefcase" aria-hidden="true"></i>Google Bussiness</a>
+      </li>
+      <li [routerLink]="['/hashtags']" routerLinkActive="router-link-active">
+        <a><i class="fa fa-desktop" aria-hidden="true"></i>Hashtags</a>
       </li>
       <li [routerLink]="['/connection']" routerLinkActive="router-link-active">
         <a> <i class="fa fa-connectdevelop" aria-hidden="true"></i>Connecting</a>

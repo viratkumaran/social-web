@@ -32,6 +32,13 @@ import { LandingpageComponent } from './landingpage/landingpage.component';
 import { ChartsModule } from '@progress/kendo-angular-charts';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import 'hammerjs';
+import { FbComponent } from './fb/fb.component';
+import { InstaComponent } from './insta/insta.component';
+import { TwitterComponent } from './twitter/twitter.component';
+import { LinkedinComponent } from './linkedin/linkedin.component';
+import { GooglemybComponent } from './googlemyb/googlemyb.component';
+import { InbocComponent } from './inboc/inboc.component';
+import { PlaningComponent } from './planing/planing.component';
 
 
 
@@ -55,6 +62,13 @@ import 'hammerjs';
     MainviewComponent,
     DateAgoPipe,
     LandingpageComponent,
+    FbComponent,
+    InstaComponent,
+    TwitterComponent,
+    LinkedinComponent,
+    GooglemybComponent,
+    InbocComponent,
+    PlaningComponent,
   ],
   imports: [
     BrowserModule,
