@@ -79,3 +79,9 @@ color: red;
  .router-link-active i {
     color: white !important;
 }
+i.fa.fa-plus-square-o {
+    position: absolute;
+    right: 0;
+    margin-top: 5px;
+    color: gray;
+}

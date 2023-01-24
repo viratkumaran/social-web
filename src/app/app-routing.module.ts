@@ -1,3 +1,4 @@
+import { BrandComponent } from './brand/brand.component';
 import { HastagsComponent } from './hastags/hastags.component';
 import { InbocComponent } from './inboc/inboc.component';
 import { PlaningComponent } from './planing/planing.component';
@@ -18,7 +19,7 @@ import { ScheduleComponent } from './schedule/schedule.component';
 import { GuardActivateGuard } from './guard-activate.guard';
 import { MonitorComponent } from './monitor/monitor.component';
 import { LandingpageComponent } from './landingpage/landingpage.component';
-
+// import { BrandComponent } from "./brand/brand.component"
 const routes: Routes = [
   { path: "login", component: LoginComponent },
   { path: "signin", component: SignupComponent },
@@ -38,6 +39,7 @@ const routes: Routes = [
   { path: "inbox", component: InbocComponent, canActivate: [GuardActivateGuard] },
   { path: "hashtag", component: HastagsComponent, canActivate: [GuardActivateGuard] },
   { path: "", component: LandingpageComponent },
+  { path: "brand", component: BrandComponent, canActivate: [GuardActivateGuard] }
 
   // { path: '**', redirectTo: 'home', pathMatch: 'full' }
   // {path:'',redirectTo:'/login',pathMatch:'full'}

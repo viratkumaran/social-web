@@ -1,0 +1,140 @@
+.card{
+    background-color: #fff;
+    border-color: #fff;
+    color: rgba(0,0,0,.87);
+    box-shadow: 0 2px 4px -1px rgb(0 0 0 / 8%), 0 4px 5px 0 rgb(0 0 0 / 5%), 0 1px 10px 0 rgb(0 0 0 / 3%);
+    padding: 24px;
+}
+.ui-brands-h5{
+    font-size: 18px;
+}
+.wrapper-padding {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.mt-6 {
+    margin-top: 24px!important;
+}
+.ui-brands-h5 span{
+    padding: 4px 13px;
+    background: white;
+    font-size: 12px;
+    border: 2px solid gray;
+    border-radius: 7px;
+    margin-left: 15px;
+}
+button.ui-connection {
+    background: transparent;
+    border: 1px solid;
+    border: 2px solid gray;
+    margin-left: 18px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 5px;
+    /* padding: 0px 14px; */
+}
+.form-view {
+    padding: 5px 28px;
+    font-size: 13px;
+    margin-top: 17px;
+    margin-left: 12px;
+    border-radius: 7px;
+    border: 2px solid gray;
+}
+.ui-ab{
+    position: absolute;
+    right: 12px;
+  
+    padding-top: 17px;
+
+}
+.view-user{
+    font-size: 12px;
+    margin-top: 11px;
+    font-weight: 400;
+    cursor: pointer;
+}
+.ui-mu-back{
+padding: 15px;
+background-color:rgb(236 236 236);
+border: 1px solid;
+}
+.f-alert{
+    font-size: .875rem!important;
+    line-height: 1.25rem;
+    letter-spacing: .0178571429em!important;
+}
+button.getp {
+    background: #414141;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}
+.fb-box-link ,.twiter-box-link,.instagram-box-link,.linkedin-box-link,.pinterest-box-link,.briefcase-box-link{
+    margin-top: 15px;
+}
+label.lbl {
+    font-size: 16px;
+}
+i.fa.fa-facebook {
+    color: #2b6ff2;
+}
+
+
+.fb-box-link .box {
+    background: #063c72;
+    padding: 15px;
+    border-radius: 15px;
+    color: white;
+    font-size: 17px;
+    font-weight: bolder;
+}
+.twiter-box-link .box{
+    background: #3092f4;
+    padding: 15px;
+    border-radius: 15px;
+    color: white;
+    font-size: 17px;
+    font-weight: bolder;
+}
+.instagram-box-link .box{
+    background: #fa4f67;
+    padding: 15px;
+    border-radius: 15px;
+    color: white;
+    font-size: 17px;
+    font-weight: bolder;
+}
+.briefcase-box-link .box{
+    background: #0e384e;
+    padding: 15px;
+    border-radius: 15px;
+    color: white;
+    font-size: 17px;
+    font-weight: bolder;
+}
+.linkedin-box-link .box{
+    background: #085eb4;
+    padding: 15px;
+    border-radius: 15px;
+    color: white;
+    font-size: 17px;
+    font-weight: bolder;
+}
+.pinterest-box-link .box{
+    background: #a21818;
+    padding: 15px;
+    border-radius: 15px;
+    color: white;
+    font-size: 17px;
+    font-weight: bolder;
+}
+.twiter-box-link .box{
+    background: #3092f4;
+    padding: 15px;
+    border-radius: 15px;
+    color: white;
+    font-size: 17px;
+    font-weight: bolder;
+}

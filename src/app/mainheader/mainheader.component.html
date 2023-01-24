@@ -142,9 +142,12 @@
 
       </ul>
       <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <li class="nav-item" style="list-style: none;">
+          <a class="nav-link">Rajakumaran</a>
+        </li>
+        <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
-        <button (click)="logout()" class="btn btn-outline-primary ml-2" type="submit">Logout</button>
+        <button (click)="logout()" class="btn btn-outline-primary ml-2" type="submit">Logout</button> -->
       </form>
     </div>
   </div>
@@ -154,28 +157,34 @@
   <nav class="nav sidebar">
     <ul class="menu-slide ">
       <li [routerLink]="['/facebook']" routerLinkActive="router-link-active">
-        <a><i class="fa fa-facebook-square" aria-hidden="true"></i>Facebook</a>
+        <a><i class="fa fa-facebook-square" aria-hidden="true"></i>Facebook <i class="fa fa-plus-square-o"
+            aria-hidden="true"></i></a>
       </li>
       <li [routerLink]="['/instagram']" routerLinkActive="router-link-active">
-        <a><i class="fa fa-instagram" aria-hidden="true"></i>Instagram</a>
+        <a><i class="fa fa-instagram" aria-hidden="true"></i>Instagram <i class="fa fa-plus-square-o"
+            aria-hidden="true"></i></a>
       </li>
       <li [routerLink]="['/twitter']" routerLinkActive="router-link-active">
-        <a> <i class=" fa fa-twitter-square" aria-hidden="true"></i>Twitter</a>
+        <a> <i class=" fa fa-twitter-square" aria-hidden="true"></i>Twitter <i class="fa fa-plus-square-o"
+            aria-hidden="true"></i></a>
       </li>
       <li [routerLink]="['/linkedin']" routerLinkActive="router-link-active">
-        <a><i class="fa fa-linkedin-square" aria-hidden="true"></i>Linkedin</a>
+        <a><i class="fa fa-linkedin-square" aria-hidden="true"></i>Linkedin <i class="fa fa-plus-square-o"
+            aria-hidden="true"></i></a>
       </li>
       <li [routerLink]="['/Monitor']" routerLinkActive="router-link-active">
-        <a><i class="fa fa-pinterest-square" aria-hidden="true"></i>PinInterest</a>
+        <a><i class="fa fa-pinterest-square" aria-hidden="true"></i>PinInterest <i class="fa fa-plus-square-o"
+            aria-hidden="true"></i></a>
       </li>
       <li [routerLink]="['/Monitor']" routerLinkActive="router-link-active">
-        <a><i class="fa fa-briefcase" aria-hidden="true"></i>Google Bussiness</a>
+        <a><i class="fa fa-briefcase" aria-hidden="true"></i>Google Bussiness <i class="fa fa-plus-square-o"
+            aria-hidden="true"></i></a>
       </li>
       <li [routerLink]="['/hashtags']" routerLinkActive="router-link-active">
         <a><i class="fa fa-desktop" aria-hidden="true"></i>Hashtags</a>
       </li>
       <li [routerLink]="['/connection']" routerLinkActive="router-link-active">
-        <a> <i class="fa fa-connectdevelop" aria-hidden="true"></i>Connecting</a>
+        <a> <i class="fa fa-connectdevelop" aria-hidden="true"></i>Connecting </a>
       </li>
     </ul>
   </nav>
